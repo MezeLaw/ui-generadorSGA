@@ -16,3 +16,9 @@
 .select-style {
     width: 55%;
 }
+
+.button-spinner{
+    width: 17px !important;
+    height: 17px !important;
+    display: inline;
+}

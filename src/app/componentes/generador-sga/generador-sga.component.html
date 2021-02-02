@@ -37,7 +37,6 @@
                 </mat-option>
               </mat-select>
               <mat-error *ngIf="tagForm.controls.codigo.hasError('required')">Por favor, seleccione un rótulo</mat-error>
-              <!--<mat-hint>{{elementControl.value?.descripcion}}</mat-hint>-->
             </mat-form-field>
         </mat-grid-tile> 
 
@@ -46,6 +45,12 @@
         [rowspan]="2"
         [style.background]="">
             <button mat-flat-button type="submit" color="accent" [disabled]="!tagForm.valid || !ready">Generar rótulo</button>
+        </mat-grid-tile>
+        <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="2"
+        [style.background]="">
+         <mat-spinner color="accent"></mat-spinner>
         </mat-grid-tile>
       </mat-grid-list>
     </form>
