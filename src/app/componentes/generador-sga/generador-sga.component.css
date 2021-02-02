@@ -1,0 +1,18 @@
+.grid-list-styles {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+.title-styles {
+    position: absolute;
+    left: 0px;
+}
+
+.divider-style {
+    width: 100%; 
+    margin-top:25px;
+}
+
+.select-style {
+    width: 55%;
+}

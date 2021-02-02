@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-color {
+    color: #008080 !important;
+    background-color: #008080 !important;
+}
+
+.menu-color{
+    color: white;
+    /**background-color:#ff4081;*/
+}
+
+.navbar-brand-margin {
+    margin-top: 12px;
+}

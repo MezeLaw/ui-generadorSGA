@@ -1,0 +1,34 @@
+<main [@fadeIn]="fadeIn">
+
+    <mat-grid-list [cols]="1" rowHeight="70px" class="grid-list-styles">
+      <mat-grid-tile 
+          [colspan]="1"
+          [rowspan]="1"
+          [style.background]="">
+          <h1 class="title-styles">Links útiles</h1>    
+          <mat-divider class="divider-style"></mat-divider>
+      </mat-grid-tile> 
+    </mat-grid-list>
+  
+    <div class="text-style">
+      <p>En esta sección se comparten links útiles.
+        <br>
+        <br>
+        ¡Gracias!
+        </p>
+    </div>
+  
+    <mat-grid-list [cols]="1" rowHeight="200px" class="grid-list-styles">
+      <mat-grid-tile 
+          [colspan]="1"
+          [rowspan]="1"
+          [style.background]="">
+          <div class="encuesta-style">
+            <button mat-fab color="accent" aria-label="Boton encuesta">
+              <mat-icon title="Encuesta">leaderboard</mat-icon>
+            </button>
+          </div>
+      </mat-grid-tile> 
+    </mat-grid-list>
+  
+  </main>

@@ -1,0 +1,137 @@
+<main [@fadeIn]="fadeIn">
+ 
+  <mat-grid-list [cols]="textColSize" rowHeight="70px" class="grid-list-styles">
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1"
+        [style.background]="">
+        <h1 class="title-styles">Bienvenidos</h1>    
+        <mat-divider class="divider-style"></mat-divider>
+    </mat-grid-tile> 
+  </mat-grid-list>
+
+  <div class="text-style">
+    <p>Es un agrado poder darle la bienvenida al primer GeneradorSGA
+      online. Nuestra aplicación web es el resultado de una iniciativa
+      que intenta ofrecer una herramienta más a los profesionales de
+      Higiene y Seguridad sobre el correcto etiquetado de los productos
+      químicos tal como lo establece el Sistema Globalmente Armonizado. A
+      su vez, también busca poder ayudar a las a las empresas que día a
+      día usan, en sus procesos productivos, químicos que deben estar
+      correctamente señalizados con el objetivo de poder crear una
+      cultura de prevención.
+      <br>     <br>
+      Desde la pestaña "Generador de SGA", podrá buscar por el
+      nombre del producto químico en cuestión y con solo hacer click en
+      "Generar" se descargara una copia del etiquetado correspondiente.
+      Adicionalmente, si usted desea obtener el rotulado de un producto
+      que no disponemos, podrá escribirnos y enviarnos la mayor
+      información técnica que posea y será agregada con la mayor
+      celeridad posible.
+      <br>     <br>
+      Los saluda atentamente, el staff de GeneradorSGA
+      </p>
+  </div>
+
+<!-- 
+  <mat-grid-list cols="1" [rowHeight]="textHeight" class="grid-list-styles">
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1"
+        [class.fixed-top]="isMobile"> 
+        <p class="text-style">Es un agrado poder darle la bienvenida al primer GeneradorSGA
+					online. Nuestra aplicación web es el resultado de una iniciativa
+					que intenta ofrecer una herramienta más a los profesionales de
+					Higiene y Seguridad sobre el correcto etiquetado de los productos
+					químicos tal como lo establece el Sistema Globalmente Armonizado. A
+					su vez, también busca poder ayudar a las a las empresas que día a
+					día usan, en sus procesos productivos, químicos que deben estar
+					correctamente señalizados con el objetivo de poder crear una
+          cultura de prevención.
+          <br>     <br>
+          Desde la pestaña "Generador de SGA", podrá buscar por el
+          nombre del producto químico en cuestión y con solo hacer click en
+          "Generar" se descargara una copia del etiquetado correspondiente.
+          Adicionalmente, si usted desea obtener el rotulado de un producto
+          que no disponemos, podrá escribirnos y enviarnos la mayor
+          información técnica que posea y será agregada con la mayor
+          celeridad posible.
+          <br>     <br>
+          Los saluda atentamente, el staff de GeneradorSGA
+				  </p>
+      </mat-grid-tile> 
+  
+  
+  </mat-grid-list> -->
+
+  <!-- Tarjetas -->
+  <mat-grid-list [cols]="cardColSize" rowHeight="400px" class="grid-list-styles card-styles">
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1"> 
+        <mat-card class="home-card">
+          <mat-card-header> 
+            <mat-card-title class="card-title">¿Qué es el SGA? <mat-icon>language</mat-icon></mat-card-title> 
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              El Sistema Globalmente Armonizado de Clasificación y Etiquetado de productos químicos 
+              (SGA o GHS por sus siglas en inglés) establece criterios armonizados para clasificar 
+              sustancias y mezclas con respecto a sus peligros físicos, para la salud y para el medio 
+              ambiente.
+            </p>
+          </mat-card-content> 
+          <mat-card-actions>
+            <button mat-flat-button color="accent" class="button-align">Primary</button>
+          </mat-card-actions>
+        </mat-card>
+
+    </mat-grid-tile> 
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1">
+        <mat-card class="home-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Libro púrpura <mat-icon class="card-icon-size">thermostat</mat-icon></mat-card-title> 
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Los criterios establecidos en el SGA se basan en lo descrito en un documento denominado Libro Púrpura.
+            </p>
+          </mat-card-content> 
+          <mat-card-actions>
+            <button mat-flat-button color="accent">Primary</button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile> 
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1">
+        <mat-card class="home-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Resolución SRT N° 801/2015 <mat-icon>library_books</mat-icon> </mat-card-title> 
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Establece la implementación del SGA en el ámbito laboral de nuestro país y es de cumplimiento obligatorio dentro del Sistema de Riesgos del Trabajo
+            </p>
+          </mat-card-content> 
+          <mat-card-actions>
+            <button mat-flat-button color="accent">Primary</button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile> 
+  </mat-grid-list>
+
+  <mat-grid-list [cols]="textColSize" rowHeight="70px" class="grid-list-styles">
+    <mat-grid-tile 
+        [colspan]="1"
+        [rowspan]="1"
+        [style.background]=""> 
+    </mat-grid-tile> 
+  </mat-grid-list>
+  <!-- Fin Tarjetas -->
+
+</main>

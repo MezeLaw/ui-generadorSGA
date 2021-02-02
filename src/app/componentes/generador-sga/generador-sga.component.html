@@ -1,0 +1,53 @@
+<main [@fadeIn]="fadeIn">
+
+  <div *ngIf="isLoading">
+    <mat-grid-list [cols]="1" rowHeight="500px" class="grid-list-styles">
+      <mat-grid-tile 
+          [colspan]="1"
+          [rowspan]="1"
+          [style.background]="">
+          <mat-spinner color="accent"></mat-spinner>
+      </mat-grid-tile> 
+    </mat-grid-list>
+  </div>
+
+  <div *ngIf="!isLoading">
+    <mat-grid-list [cols]="1" rowHeight="70px" class="grid-list-styles">
+        <mat-grid-tile 
+            [colspan]="1"
+            [rowspan]="1"
+            [style.background]="">
+            <h1 class="title-styles">Generar Rótulo</h1>    
+            <mat-divider class="divider-style"></mat-divider>
+        </mat-grid-tile> 
+      </mat-grid-list>
+
+      <form [formGroup]="tagForm" (ngSubmit)="onSubmit()">
+      <mat-grid-list [cols]="1" rowHeight="50px" class="grid-list-styles">
+        <mat-grid-tile 
+            [colspan]="1"
+            [rowspan]="2"
+            [style.background]="">   
+            <mat-form-field class="select-style" appearance="fill">
+              <mat-label>Seleccione el rótulo</mat-label>
+              <mat-select formControlName="codigo" required id="selectRotulo">
+                <mat-option>...</mat-option>
+                <mat-option *ngFor="let elemento of elements" [value]="elemento.codigo">
+                  {{elemento.descripcion}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="tagForm.controls.codigo.hasError('required')">Por favor, seleccione un rótulo</mat-error>
+              <!--<mat-hint>{{elementControl.value?.descripcion}}</mat-hint>-->
+            </mat-form-field>
+        </mat-grid-tile> 
+
+        <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="2"
+        [style.background]="">
+            <button mat-flat-button type="submit" color="accent" [disabled]="!tagForm.valid">Generar rótulo</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </div>
+</main> 
