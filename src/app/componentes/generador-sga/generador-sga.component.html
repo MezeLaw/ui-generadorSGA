@@ -45,7 +45,7 @@
         [colspan]="1"
         [rowspan]="2"
         [style.background]="">
-            <button mat-flat-button type="submit" color="accent" [disabled]="!tagForm.valid">Generar rótulo</button>
+            <button mat-flat-button type="submit" color="accent" [disabled]="!tagForm.valid || !ready">Generar rótulo</button>
         </mat-grid-tile>
       </mat-grid-list>
     </form>

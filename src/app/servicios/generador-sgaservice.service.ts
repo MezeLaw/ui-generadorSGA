@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Elemento } from '../interfaces/Elemento';
+import { map } from "rxjs/operators";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,13 @@ export class GeneradorSGAServiceService {
     return this.http.get<Elemento[]>(`${this.localUrl}/getTags`)
   }
 
-  public getTagsByCode(code : String){
-    this.http.get("http://localhost:8080/getTagByCode")
-  }
+
+  public downloadFile(fileName: string): Observable<any> {
+    return this.http.get(`${this.localUrl}/getTagByCode/${fileName}`, { responseType: 'blob' }).pipe(map((response : any)=>{
+        return {
+            filename: `${fileName}.pdf`,
+            data: response
+        };
+    }));
+}
 }
