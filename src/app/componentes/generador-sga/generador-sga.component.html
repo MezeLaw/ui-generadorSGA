@@ -48,10 +48,18 @@
         </mat-grid-tile>
         <mat-grid-tile
         [colspan]="1"
-        [rowspan]="2"
+        [rowspan]="4"
         [style.background]="">
-         <mat-spinner color="accent"></mat-spinner>
+         <mat-spinner *ngIf="!ready" color="accent"></mat-spinner>
         </mat-grid-tile>
+
+        <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1"
+        [style.background]="">  
+         <span *ngIf="!ready">cargando...</span>
+        </mat-grid-tile>
+
       </mat-grid-list>
     </form>
   </div>
