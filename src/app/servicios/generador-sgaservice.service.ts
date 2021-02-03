@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class GeneradorSGAServiceService {
 
-  public localUrl = "http://localhost:8080"
+  public localUrl = "http://localhost:8080/api"
 
   constructor(public http : HttpClient) { }
 

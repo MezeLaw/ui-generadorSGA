@@ -10,11 +10,11 @@ const routes: Routes = [
   { path: 'noticias', component: NewsComponent},
   { path: 'generador', component: GeneradorSGAComponent},
   { path: 'links-importantes', component: UsefullLinksComponent},
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
