@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class GeneradorSGAServiceService {
 
-  public baseUrl = "http://localhost:8080/api"
-  //public baseUrl = "http://generadorsga.com.ar/api"
+  //public baseUrl = "http://localhost:8080/api"
+  public baseUrl = "http://generadorsga.com.ar/api"
   constructor(public http : HttpClient) { }
 
   public getTags(){
